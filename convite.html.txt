@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            color: #ff6347;
+        }
+        .button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #ff4500;
+        }
+        #noButton {
+            position: relative;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Oi sebosa!</h1>
+    <p>sabia que voce é incrivel? 😊</p>
+    <div id="noButton" class="button" onclick="moveButton()">Não</div>
+    <a href="https://www.youtube.com/watch?v=S9bCLPwzSC0" class="button">Sim</a>
+</div>
+
+<script>
+    function moveButton() {
+        const button = document.getElementById('noButton');
+        const container = document.querySelector('.container');
+        const randomX = Math.floor(Math.random() * (container.clientWidth - 100));
+        const randomY = Math.floor(Math.random() * (container.clientHeight - 50));
+        button.style.position = 'absolute';
+        button.style.left = randomX + 'px';
+        button.style.top = randomY + 'px';
+    }
+</script>
+
+</body>
+</html>
